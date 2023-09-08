@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a70a0df8ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <img
+        src="./profile-img.jpg"
+        alt="Adedamola Olawale"
+        data-testid="slackDisplayImage"
+      />
+      <div class="card-texts">
+        <h1 data-testid="slackUserName">Adedamola Olawale</h1>
+        <div class="icon-wrap">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h3 data-testid="myTrack">Front-End Track</h3>
+        </div>
+
+        <div class="icon-wrap">
+          <i class="fa-regular fa-clock"></i>
+          <p id="time" data-testid="currentUTCTime">00:00</p>
+        </div>
+
+        <div class="icon-wrap">
+          <i class="fa-regular fa-calendar-days"></i>
+          <p id="day" data-testid="currentDayOfTheWeek">Day</p>
+        </div>
+
+        <a
+          href="https://github.com/Dprof-code/profile-card"
+          data-testid="githubURL"
+          target="_blank"
+          >View Code<i class="fa-solid fa-code"></i
+        ></a>
+      </div>
+    </div>
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
