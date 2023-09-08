@@ -6,8 +6,8 @@ function time() {
     //  let hour = date.getUTCHours();
     // let mins = date.getUTCMinutes();
     // let secs = date.getUTCSeconds();
-    //let milliSecs = date.getUTCMilliseconds();
-    let timeUTC = date.toISOString().substr(11, 8);
+    let milliSecs = date.getUTCMilliseconds();
+    //let timeUTC = date.toISOString().substr(11, 8);
 
     // hour < 10 ? hour = "0" + hour : hour = hour;
 
@@ -15,7 +15,7 @@ function time() {
 
     // secs < 10 ? secs = "0" + secs : secs = secs;
 
-    timeWrap.innerText = timeUTC;
+    timeWrap.innerText = milliSecs;
 
     //timeUTCElement.innerText = timeUTC + " (UTC Time)";
 
