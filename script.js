@@ -1,5 +1,6 @@
 let timeWrap = document.getElementById("time");
 let day = document.getElementById("day");
+let timeUTCElement = document.getElementById("time-utc");
 
 
 
@@ -9,6 +10,7 @@ function time() {
     let hour = date.getUTCHours();
     let mins = date.getUTCMinutes();
     let secs = date.getUTCSeconds();
+    let timeUTC = date.getTime();
 
     hour < 10 ? hour = "0" + hour : hour = hour;
 
@@ -17,6 +19,8 @@ function time() {
     secs < 10 ? secs = "0" + secs : secs = secs;
 
     timeWrap.innerText = hour + " : " + mins + " : " + secs;
+
+    timeUTCElement.innerText = timeUTC + " (UTC Time)";
 
     switch (date.getDay()) {
         case 0:
