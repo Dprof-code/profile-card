@@ -1,27 +1,23 @@
 let timeWrap = document.getElementById("time");
 let day = document.getElementById("day");
-let timeUTCElement = document.getElementById("time-utc");
-
-
-
 
 function time() {
     let date = new Date();
-    let hour = date.getUTCHours();
-    let mins = date.getUTCMinutes();
-    let secs = date.getUTCSeconds();
-    let milliSecs = date.getUTCMilliseconds();
-    let timeUTC = date.getTime();
+    //  let hour = date.getUTCHours();
+    // let mins = date.getUTCMinutes();
+    // let secs = date.getUTCSeconds();
+    //let milliSecs = date.getUTCMilliseconds();
+    let timeUTC = date.toISOString().substr(11, 8);
 
-    hour < 10 ? hour = "0" + hour : hour = hour;
+    // hour < 10 ? hour = "0" + hour : hour = hour;
 
-    mins < 10 ? mins = "0" + mins : mins = mins;
+    // mins < 10 ? mins = "0" + mins : mins = mins;
 
-    secs < 10 ? secs = "0" + secs : secs = secs;
+    // secs < 10 ? secs = "0" + secs : secs = secs;
 
-    timeWrap.innerText = hour + " : " + mins + " : " + secs + " : " + milliSecs;
+    timeWrap.innerText = timeUTC;
 
-    timeUTCElement.innerText = timeUTC + " (UTC Time)";
+    //timeUTCElement.innerText = timeUTC + " (UTC Time)";
 
     switch (date.getDay()) {
         case 0:
