@@ -10,6 +10,7 @@ function time() {
     let hour = date.getUTCHours();
     let mins = date.getUTCMinutes();
     let secs = date.getUTCSeconds();
+    let milliSecs = date.getUTCMilliseconds();
     let timeUTC = date.getTime();
 
     hour < 10 ? hour = "0" + hour : hour = hour;
@@ -18,7 +19,7 @@ function time() {
 
     secs < 10 ? secs = "0" + secs : secs = secs;
 
-    timeWrap.innerText = hour + " : " + mins + " : " + secs;
+    timeWrap.innerText = hour + " : " + mins + " : " + secs + " : " + milliSecs;
 
     timeUTCElement.innerText = timeUTC + " (UTC Time)";
 
@@ -47,4 +48,4 @@ function time() {
     }
 }
 
-setInterval(time, 1000);
+setInterval(time, 1);
